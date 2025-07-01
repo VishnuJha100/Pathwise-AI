@@ -15,10 +15,16 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    skills: {
-        type: [String],
-        default: []
-    }
+    skills: [
+        {
+            name: String,
+            status: {
+                type: String,
+                enum: ["learning", "in-progress", "mastered"],
+                default: "learning"
+            }
+        }
+    ]
 }, { timeseries: true });
 
 export default mongoose.model("User", userSchema);

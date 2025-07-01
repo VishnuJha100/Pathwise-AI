@@ -4,6 +4,8 @@ import cors from "cors";
 import dotnev from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
 import resumeRoutes from "./routes/resumeRoutes.js";
+import roleRoutes from "./routes/roleRoutes.js";
+import learningRoutes from "./routes/learningRoutes.js";
 
 dotnev.config();
 
@@ -16,6 +18,8 @@ const PORT = process.env.PORT || 8000;
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/resume", resumeRoutes);
+app.use("/api/roles", roleRoutes);
+app.use("/api/learning", learningRoutes);
 
 // DB connection
 mongoose.connect(process.env.MONGO_URI, {})
