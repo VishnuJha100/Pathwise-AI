@@ -1,7 +1,11 @@
+import Login from "./Pages/auth/Login.jsx"
+import Register from "./Pages/auth/Register.jsx"
+
 function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
-      <h1 className="text-4xl font-bold">🚀 Pathwise-AI Coming Soon</h1>
+      {/*<Login />*/}
+      <Register />
     </div>
   );
 }
