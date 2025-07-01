@@ -1,11 +1,16 @@
-import Login from "./Pages/auth/Login.jsx"
-import Register from "./Pages/auth/Register.jsx"
+
+import Landing from "./Pages/auth/Landing.jsx";
+import { Toaster } from "react-hot-toast";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
-      {/*<Login />*/}
-      <Register />
+    <div>
+      <Toaster />
+
+      <Routes>
+        <Route path="/landing" element={<Landing />} />
+      </Routes>
     </div>
   );
 }
